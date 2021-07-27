@@ -5,6 +5,7 @@ public class SnakeAndLadder
 { 
   
 		 static final int STARTING_POINT = 0; 
+		 static  final int ENDING_POSITION = 100;
 		 static final int PLAYER=1; 
 		 static final int LADDER = 1; 
 		 static final int SNAKE = 2; 
@@ -21,6 +22,9 @@ public class SnakeAndLadder
      	 public void gamePlay() 
    { 
          int playerPosition=STARTING_POINT; 
+         
+         while (playerPosition<ENDING_POSITION) {
+         
          int dice=DiceRoll(); 
          int action = RANDOM.nextInt(3); 
          System.out.println("Action: "+action); 
@@ -47,7 +51,8 @@ public class SnakeAndLadder
                  } 
                  System.out.println("No play position: "+playerPosition); 
                  break; 
-            } 
+           }
+         } 
      } 
          public static void main(String args[]) 
        { 
