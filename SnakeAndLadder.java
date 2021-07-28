@@ -11,11 +11,15 @@ public class SnakeAndLadder {
 	static final int SNAKE = 2;
 	static final int NOPLAY = 0;
 	static final int player1Position = 0;
+	int totalDiceCount=0;
 	static Random RANDOM = new Random();
 
 	public int rollDice() {
 		int diceNumber = (RANDOM.nextInt(6) + 1);
 		System.out.println("Dice number  " + diceNumber);
+		totalDiceCount++; 
+		System.out.println("totalDiceCount " +totalDiceCount); 
+
 		return diceNumber;
 	}
 
